@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 World Cup Coca-Cola Stickers Inventory</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-coke">
+
+<header>
+  <h1>2026 FIFA World Cup &mdash; Coca-Cola Stickers</h1>
+  <p class="subtitle">CC1 &ndash; CC12 Coca-Cola promo set</p>
+  <div class="nav">
+    <a href="index.html">Stickers</a>
+    <a href="blue.html">Blue Border</a>
+    <a href="orange.html">Orange Border</a>
+    <a href="red.html">Red Border</a>
+    <a href="foil.html">Foil Cards</a>
+    <a href="coke.html" class="active">Coke Stickers</a>
+  </div>
+  <div class="sync"><span class="dot" id="syncDot"></span><span id="syncText">Connecting…</span></div>
+  <div class="stats">
+    <div class="stat"><div class="num" id="statTotal">0</div><div class="lbl">total cards</div></div>
+    <div class="stat"><div class="num" id="statUnique">0 / 12</div><div class="lbl">unique owned</div></div>
+    <div class="stat"><div class="num" id="statDupes">0</div><div class="lbl">extras (sellable)</div></div>
+    <div class="stat"><div class="num" id="statTeams">0 / 1</div><div class="lbl">sets complete</div></div>
+  </div>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search player...">
+    <select id="filter">
+      <option value="all">Show all</option>
+      <option value="owned">Owned only</option>
+      <option value="missing">Missing only</option>
+      <option value="dupes">Duplicates only</option>
+    </select>
+    <button id="expandAll">Expand all</button>
+    <button id="collapseAll">Collapse all</button>
+    <button id="exportBtn">Export CSV</button>
+    <button id="backupBtn">Backup</button>
+    <button id="restoreBtn">Restore</button>
+    <input type="file" id="restoreFile" class="fileimport" accept="application/json">
+    <button id="resetBtn" class="danger">Reset</button>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  Everyone who opens this page edits the same live inventory &mdash; changes appear for
+  everyone within a second or two. Use <strong>Backup</strong> occasionally to save a local copy.
+  This tracks the 12-card Coca-Cola x Panini promo set (CC1-CC12), separate from the regular stickers.
+</footer>
+
+<div id="toast"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="coke-data.js"></script>
+<script>window.COLLECTION_KEY = 'coke';</script>
+<script src="app.js"></script>
+</body>
+</html>
