@@ -8,7 +8,7 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,B
 header{position:sticky;top:0;z-index:20;background:rgba(247,248,250,0.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);padding:14px 16px;}
 h1{font-size:17px;margin:0 0 4px 0;font-weight:650;display:flex;align-items:center;gap:8px;}
 .subtitle{font-size:12px;color:var(--muted);margin:0 0 10px 0;}
-.nav{display:flex;gap:8px;margin-bottom:10px;}
+.nav{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
 .nav a{font-size:12px;text-decoration:none;color:var(--muted);background:var(--panel2);border:1px solid var(--border);padding:6px 10px;border-radius:8px;}
 .nav a.active{color:#fff;background:var(--accent);border-color:var(--accent);font-weight:600;}
 .sync{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);margin-bottom:10px;}
@@ -76,13 +76,13 @@ body.theme-red .row.owned{background:rgba(208,52,44,0.08);}
 body.theme-red summary .badge.complete{background:rgba(208,52,44,0.15);border-color:#d0342c;color:#a3251f;}
 body.theme-red button.primary{background:#d0342c;border-color:#d0342c;}
 
-/* foil page theme (silver/pearl) */
-body.theme-foil header{border-bottom-color:#9aa1ac;background:linear-gradient(90deg, rgba(247,248,250,0.97), rgba(226,230,236,0.97));}
-body.theme-foil h1{background:linear-gradient(90deg,#5c6470,#9aa1ac,#5c6470);-webkit-background-clip:text;background-clip:text;color:transparent;}
-body.theme-foil .nav a.active{background:#6b7280;border-color:#6b7280;}
-body.theme-foil .row.owned{background:rgba(107,114,128,0.09);}
-body.theme-foil summary .badge.complete{background:rgba(107,114,128,0.15);border-color:#6b7280;color:#3f4550;}
-body.theme-foil button.primary{background:#6b7280;border-color:#6b7280;}
+/* green-border page theme */
+body.theme-green header{border-bottom-color:#1f9254;}
+body.theme-green h1{color:#187540;}
+body.theme-green .nav a.active{background:#1f9254;border-color:#1f9254;}
+body.theme-green .row.owned{background:rgba(31,146,84,0.08);}
+body.theme-green summary .badge.complete{background:rgba(31,146,84,0.15);border-color:#1f9254;color:#187540;}
+body.theme-green button.primary{background:#1f9254;border-color:#1f9254;}
 
 /* coca-cola promo page theme */
 body.theme-coke header{border-bottom-color:#f40009;}
