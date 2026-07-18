@@ -1,5 +1,3 @@
-// Paste the config object from Firebase console (Project settings > General > Your apps > SDK setup)
-// Make sure "databaseURL" is included -- that only shows up once you've created a Realtime Database.
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
